@@ -8,6 +8,19 @@ let gameActive = true;
 let currentPlayer = "X";
 let gameState = ["", "", "", "", "", "", "", "", ""];
 
+const ubdateScore = (winner) => {
+    if (winner === "X") {
+        xScore++;
+        X_SCORE_DISPLAY.innerHTML = 'X: ${xScore}';
+    } else if (winner === "O") {
+        oScore++;
+        O_SCORE_DISPLAY.innerHTML = 'O: ${oScore}';
+    }
+
+};
+//score counter
+
+
 const winningMessage = () => `Player ${currentPlayer} has won!`;
 const drawMessage = () => `Game ended in a draw!`;
 const currentPlayerTurn = () => `It's ${currentPlayer}'s turn`;
