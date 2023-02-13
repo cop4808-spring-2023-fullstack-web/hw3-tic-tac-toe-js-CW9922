@@ -31,7 +31,12 @@ const checkComputerTurn = () => {
     }
   };
   // code to check if its computers turn and selects open square for comuter to play
-
+  function handlePlayerChange() {
+    currentPlayer = currentPlayer === "X" ? "O" : "X";
+    statusDisplay.innerHTML = currentPlayerTurn();
+    checkComputerTurn();
+  }
+// chnages player  
 const winningMessage = () => `Player ${currentPlayer} has won!`;
 const drawMessage = () => `Game ended in a draw!`;
 const currentPlayerTurn = () => `It's ${currentPlayer}'s turn`;
