@@ -19,7 +19,18 @@ const ubdateScore = (winner) => {
 
 };
 //score counter
-
+const checkComputerTurn = () => {
+    if (currentPlayer === "O") {
+      let randomIndex = Math.floor(Math.random() * 9);
+      while (gameState[randomIndex] !== "") {
+        randomIndex = Math.floor(Math.random() * 9);
+      }
+      const clickedCell = document.querySelectorAll('.cell')[randomIndex];
+      handleCellPlayed(clickedCell, randomIndex);
+      handleResultValidation();
+    }
+  };
+  // code to check if its computers turn and selects open square for comuter to play
 
 const winningMessage = () => `Player ${currentPlayer} has won!`;
 const drawMessage = () => `Game ended in a draw!`;
