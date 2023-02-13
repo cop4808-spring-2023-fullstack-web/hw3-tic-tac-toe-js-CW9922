@@ -1,5 +1,9 @@
-const statusDisplay = document.querySelector('.status');
-
+const X_SCORE_DISPLAY = document.querySelector(' .x-score');
+const O_SCORE_DISPLAY = document.querySelector(' .o-score');
+// code to keep score 
+let xScore = 0;
+let oScore = 0;
+// score initial values
 let gameActive = true;
 let currentPlayer = "X";
 let gameState = ["", "", "", "", "", "", "", "", ""];
